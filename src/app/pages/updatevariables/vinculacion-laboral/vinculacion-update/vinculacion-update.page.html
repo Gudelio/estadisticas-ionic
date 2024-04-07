@@ -1,0 +1,41 @@
+<ion-content>
+  <br>
+  <br>
+  <br>
+  <h2>Vinculación Laboral</h2>
+    <br>
+  
+    <ion-row class="ion-text-center align-items-center">
+      <ion-col size="12">
+        <ion-text><h4>Actualizar registro</h4></ion-text>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input [(ngModel)]="periodo" placeholder="Periodo"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="personasAtendidas" placeholder="Personas Atendidas"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="personasColocadas" placeholder="Personas Colocadas"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="plazasOfrecidas" placeholder="Plazas Ofrecidas"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-button expand="block" color="success" (click)="UpdateVinculacionLaboral(periodo, personasAtendidas, personasColocadas, plazasOfrecidas)">Update</ion-button>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-button expand="block" color="danger" (click)="CloseModal()">Cancel</ion-button>
+      </ion-col>
+    
+    </ion-row>  
+  
+  </ion-content>

@@ -1,0 +1,85 @@
+<ion-content>
+  <br>
+  <h2>Centro de Conciliación Laboral del Estado de Hidalgo</h2>
+    <br>
+  
+    <ion-row class="ion-text-center align-items-center">
+      <ion-col size="12">
+        <ion-text><h4>Actualizar registro</h4></ion-text>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input [(ngModel)]="periodo" placeholder="Periodo"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="orientaciones" placeholder="Orientaciones/personas atendidas en el módulo"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="gruposVulnerables" placeholder="Grupos vulnerables"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="asesorias" placeholder="Asesorías"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="solicitudesConfirmadas" placeholder="Solicitudes Confirmadas"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="audienciasDesahogadas" placeholder="Audiencias desahogadas"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="conveniosRealizados" placeholder="Convenios realizados"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="montoConvenido" placeholder="Total monto convenido (MDP)"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="constanciasnoConciliacion" placeholder="Constancias de no conciliación"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="archivados" placeholder="Archivados"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="trabajadoresAtendidos" placeholder="Trabajadores atendidos"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="audienciasMas" placeholder="Audiencias para 2da y más"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="expedientesTramite" placeholder="Expediente en trámite1"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-button expand="block" color="success" (click)="UpdateCentroConciliacion(periodo, orientaciones, gruposVulnerables, asesorias, solicitudesConfirmadas, audienciasDesahogadas, conveniosRealizados, montoConvenido, constanciasnoConciliacion, archivados, trabajadoresAtendidos, audienciasMas, expedientesTramite)">Update</ion-button>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-button expand="block" color="danger" (click)="CloseModal()">Cancel</ion-button>
+      </ion-col>
+    
+    </ion-row>  
+  
+  </ion-content>
+

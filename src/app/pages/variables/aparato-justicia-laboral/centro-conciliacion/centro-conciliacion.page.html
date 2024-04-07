@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="variables" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Centro de Conciliación Laboral del Estado de Hidalgo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <br>
+
+  <div style="margin-left: 20px; margin-right: 10px; margin-bottom: 20px; width: 95%; overflow: scroll;"> 
+  
+    <table height="270px" width="auto">
+
+      <caption>Centro de Conciliación Laboral del Estado de Hidalgo</caption>
+
+      <tr>
+        <th style="width: 180px;">CONCEPTO</th>
+        <th *ngFor="let infoCentroConciliacion of CentroConciliacion">
+          <ion-note style="color: white;">{{infoCentroConciliacion.periodo}}</ion-note>
+        </th>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">           
+          Orientaciones/personas atendidas en el módulo
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">           
+          <ion-note>{{infoCentroConciliacion.orientaciones}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Grupos vulnerables
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">         
+          <ion-note>{{infoCentroConciliacion.gruposVulnerables}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Asesorías
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">         
+          <ion-note>{{infoCentroConciliacion.asesorias}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Solicitudes Confirmadas
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">         
+          <ion-note>{{infoCentroConciliacion.solicitudesConfirmadas}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Audiencias desahogadas
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">         
+          <ion-note>{{infoCentroConciliacion.audienciasDesahogadas}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Convenios realizados
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">         
+          <ion-note>{{infoCentroConciliacion.conveniosRealizados}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Total monto convenido (MDP)
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">         
+          <ion-note>${{infoCentroConciliacion.montoConvenido}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Constancias de no conciliación
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">         
+          <ion-note>{{infoCentroConciliacion.constaciasnoConciliacion}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Archivados
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">         
+          <ion-note>{{infoCentroConciliacion.archivados}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Trabajadores atendidos
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">         
+          <ion-note>{{infoCentroConciliacion.trabajadoresAtendidos}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Audiencias para 2da y más
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">         
+          <ion-note>{{infoCentroConciliacion.audienciasMas}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Expediente en trámite1
+        </td>
+        <td *ngFor="let infoCentroConciliacion of CentroConciliacion">         
+          <ion-note>{{infoCentroConciliacion.expedientesTramite}}</ion-note>
+        </td>
+      </tr>
+
+    </table>
+  
+</div> 
+
+</ion-content>

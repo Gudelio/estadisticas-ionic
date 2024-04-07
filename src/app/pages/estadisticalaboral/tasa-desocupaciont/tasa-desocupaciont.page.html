@@ -1,0 +1,29 @@
+<ion-content>
+
+  <div> <br> </div>
+  <div style=" width: 100%;"> 
+
+      <table height="auto" width="200px" style="margin: 0 auto;">
+
+        <caption>Tasa de Desocupación %</caption>
+
+        <tr>
+          <th>Indicador</th>
+          <th>Cantidad</th>
+        </tr>     
+       
+        <tr class="align-items-center" *ngFor="let infoTasaDesocupacion of TasaDesocupacion">
+          <td>             
+            <ion-note>{{infoTasaDesocupacion.indicador}}</ion-note>
+          </td>
+          <td>             
+            <ion-note>{{infoTasaDesocupacion.cantidad}} %</ion-note>
+          </td>
+        </tr>
+      </table>
+    
+  </div>
+
+  <ion-item (click)="TasaInformalidadLaboral()"><ion-icon name="arrow-forward-sharp"></ion-icon></ion-item>
+
+</ion-content>

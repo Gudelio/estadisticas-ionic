@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="updatevariables" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Capacitación Laboral</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+        Agregar registro
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-item>
+          <ion-input [(ngModel)]="addCapacitacionLaboral.periodo" placeholder="Periodo"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addCapacitacionLaboral.cursosimpartidos" placeholder="Cursos Impartidos"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addCapacitacionLaboral.alumnoscapacitados" placeholder="Alumnos Capacitados"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="addCapacitacionLaboral.opciones" disabled></ion-input>
+        </ion-item>
+
+        
+       
+      
+        <ion-button expand="block" color="success" (click)="AddCapacitacionLaboral(addCapacitacionLaboral.periodo, 
+        addCapacitacionLaboral.cursosimpartidos, addCapacitacionLaboral.alumnoscapacitados, addCapacitacionLaboral.opciones )">Agregar</ion-button>
+    </ion-card-content>
+  
+  </ion-card>
+  
+  
+    <div> <br> </div>
+  
+    <div style="margin-left: 20px; margin-right: 10px; margin-bottom: 20px; width: 95%; overflow: scroll;"> 
+  
+        <table height="300px" width="auto">
+  
+          <caption>Capacitación Laboral</caption>
+
+          <tr>
+            <th style="width: 190px;">CONCEPTO</th>
+            <th *ngFor="let infoCapacitacionLaboral of CapacitacionLaboral">
+              <ion-note style="color: white;">{{infoCapacitacionLaboral.periodo}}</ion-note>
+            </th>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Cursos Impartidos
+            </td>
+            <td *ngFor="let infoCapacitacionLaboral of CapacitacionLaboral">           
+              <ion-note>{{infoCapacitacionLaboral.cursosimpartidos}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">            
+              Alumnos Capacitados
+            </td>
+            <td *ngFor="let infoCapacitacionLaboral of CapacitacionLaboral">         
+              <ion-note>{{infoCapacitacionLaboral.alumnoscapacitados}}</ion-note>
+            </td>
+          </tr>
+          
+          <tr class="align-items-center" >
+            <td>           
+            </td>
+            <td *ngFor="let infoCapacitacionLaboral of CapacitacionLaboral">         
+              <ion-note>{{infoCapacitacionLaboral.opciones}}</ion-note>
+              <ion-row>
+              <ion-button size="small" color="primary" (click)="UpdateCapacitacionLaboral(infoCapacitacionLaboral.id, infoCapacitacionLaboral.periodo, infoCapacitacionLaboral.cursosimpartidos, infoCapacitacionLaboral.alumnoscapacitados)"><ion-icon name="create-outline"></ion-icon></ion-button>
+              <ion-button size="small" color="danger" (click)="DeleteCapacitacionLaboral(infoCapacitacionLaboral.id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+              </ion-row>
+            </td>
+          </tr>
+
+
+        </table>
+      
+    </div> 
+
+
+</ion-content>

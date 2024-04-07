@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="updatevariables" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Otros Servicios de ICATHI</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+        Agregar registro
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-item>
+          <ion-input [(ngModel)]="addServiciosIcathi.periodo" placeholder="Periodo"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="number" class="overflow-visible" [(ngModel)]="addServiciosIcathi.proyectosIncubadora" placeholder="Proyectos Ingresados a Incubadora"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addServiciosIcathi.empresasIncubadas" placeholder="Empresas Incubadas"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addServiciosIcathi.certificadosOtorgados" placeholder="Certificados de Competencias Laborales Otorgados"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addServiciosIcathi.conveniosFirmados" placeholder="Convenios Firmados"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="addServiciosIcathi.opciones" disabled></ion-input>
+        </ion-item>
+
+      
+        <ion-button expand="block" color="success" (click)="AddServiciosICATHI(addServiciosIcathi.periodo, 
+        addServiciosIcathi.proyectosIncubadora, addServiciosIcathi.empresasIncubadas, 
+        addServiciosIcathi.certificadosOtorgados, addServiciosIcathi.conveniosFirmados, 
+        addServiciosIcathi.opciones )">Agregar</ion-button>
+
+    </ion-card-content>
+  
+  </ion-card>
+  
+  
+    <div> <br> </div>
+  
+    <div style="margin-left: 20px; margin-right: 10px; margin-bottom: 20px; width: 95%; overflow: scroll;"> 
+  
+        <table height="300px" width="auto">
+  
+          <caption>Otros Servicios de ICATHI</caption>
+
+          <tr >
+            <th style="width: 250px;">CONCEPTO</th>
+            <th *ngFor="let infoServiciosIcathi of ServiciosIcathi">
+              <ion-note style="color: white;">{{infoServiciosIcathi.periodo}}</ion-note>
+            </th>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Proyectos Ingresados a Incubadora
+            </td>
+            <td *ngFor="let infoServiciosIcathi of ServiciosIcathi">           
+              <ion-note>{{infoServiciosIcathi.proyectosIncubadora}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Empresas Incubadas
+            </td>
+            <td *ngFor="let infoServiciosIcathi of ServiciosIcathi">         
+              <ion-note>{{infoServiciosIcathi.empresasIncubadas}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Certificados de Competencias Laborales Otorgados
+            </td>
+            <td *ngFor="let infoServiciosIcathi of ServiciosIcathi">         
+              <ion-note>{{infoServiciosIcathi.certificadosOtorgados}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Convenios Firmados
+            </td>
+            <td *ngFor="let infoServiciosIcathi of ServiciosIcathi">         
+              <ion-note>{{infoServiciosIcathi.conveniosFirmados}}</ion-note>
+            </td>
+          </tr>
+          
+          <tr class="align-items-center" >
+            <td>           
+            </td>
+            <td *ngFor="let infoServiciosIcathi of ServiciosIcathi">         
+              <ion-note>{{infoServiciosIcathi.opciones}}</ion-note>
+              <ion-row>
+              <ion-button size="small" color="primary" (click)="UpdateServiciosIcathi(infoServiciosIcathi.id, infoServiciosIcathi.periodo, infoServiciosIcathi.proyectosIncubadora, infoServiciosIcathi.empresasIncubadas, infoServiciosIcathi.certificadosOtorgados, infoServiciosIcathi.conveniosFirmados)"><ion-icon name="create-outline"></ion-icon></ion-button>
+              <ion-button size="small" color="danger" (click)="DeleteServiciosIcathi(infoServiciosIcathi.id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+              </ion-row>
+            </td>
+          </tr>
+
+
+        </table>
+      
+    </div> 
+
+</ion-content>

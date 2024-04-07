@@ -1,0 +1,41 @@
+ion-content{
+    --ion-background-color:#E1EAF9 !important;
+}
+
+ion-toolbar{
+    --ion-background-color: transparent;
+    --opacity:0;
+}
+
+ion-card{
+    background-color: transparent !important;
+}
+
+ion-card-title{
+    margin-top: 32px;
+    font-size: 23px;
+    color: #080808;
+    text-align: center;
+    font-weight: 600;
+}
+
+ion-card-subtitle{
+    padding-top: 15px;
+    font-size: 17px;
+    color: #898585;
+    text-align: center;
+    font-weight: 400;
+}
+
+.signin-btms{
+margin-top: 25px;
+text-align: center;
+}
+
+.loginbtn{
+    --ion-color-primary:#255487;
+}
+
+ion-img {
+    min-height: 1px !important;
+  }

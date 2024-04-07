@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="semaforo" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Demandas en trámite</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngFor="let semaforoTramite of semaforosTramite">
+
+    <ion-card style="position: relative">
+
+      <div align="center">
+        <pinch-zoom>
+              <ion-img class="img-post" [src]="semaforoTramite.foto"></ion-img>
+        </pinch-zoom>
+      </div>
+
+      <br>
+  
+        <ion-row>
+        <ion-label> {{semaforoTramite.nombre}}</ion-label>
+        </ion-row>
+
+        <ion-row>
+        <pre>{{semaforoTramite.descripcion}}</pre>
+        </ion-row>
+  
+    </ion-card>
+  </div>
+
+  <br>
+
+  <ion-item (click)="MontoLaudos()"><ion-icon name="arrow-forward-sharp"></ion-icon></ion-item> 
+
+
+</ion-content>

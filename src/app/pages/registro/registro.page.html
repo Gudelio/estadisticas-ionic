@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title size="small">SIGN UP</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="principal" text="">
+      </ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="bg-color">
+  <br>
+  <ion-card class="ion-no-margin">
+
+    <ion-card-header>
+      <ion-card-title>
+        Registro de usuario
+      </ion-card-title>
+      <ion-card-subtitle>
+        Crea tu cuenta llenando el formulario
+        </ion-card-subtitle>
+  </ion-card-header>
+
+  <br/>
+
+ <ion-item>
+  <ion-icon name="person-outline"></ion-icon>
+    <ion-input type="text" placeholder="  Nombre Completo" [(ngModel)]="datos.nombre"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-icon name="call-outline" ></ion-icon>
+  <ion-input type="number" placeholder="No. Teléfono" [(ngModel)]="datos.telefono"></ion-input>
+</ion-item>
+
+ <ion-item>
+  <ion-icon name="mail-outline" ></ion-icon>
+  <ion-input type="email" placeholder="  Email" [(ngModel)]="datos.correo"></ion-input>
+</ion-item>
+
+ <ion-item>
+  <ion-icon name="lock-closed" ></ion-icon>
+  <ion-input type="password" placeholder="  ********" [(ngModel)]="datos.password"></ion-input>
+ </ion-item>
+
+ <div class="sign-btn-wrap">
+  <ion-button  shape="round" type="submit"  fill="solid" class="sign-btn" (click)="registerUser()">Register</ion-button>
+ </div>
+
+
+</ion-card>
+
+</ion-content>

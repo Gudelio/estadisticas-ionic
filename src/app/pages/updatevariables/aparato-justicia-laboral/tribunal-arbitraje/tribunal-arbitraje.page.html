@@ -1,0 +1,189 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="updatevariables" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Tribunal de Arbitraje en el Estado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+        Agregar registro
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-item>
+          <ion-input [(ngModel)]="addTribunalArbitraje.periodo" placeholder="Periodo"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addTribunalArbitraje.demandasContraGobiernos" placeholder="Demandas contra gobiernos Estatal y Municipales"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addTribunalArbitraje.demandasContraMunicipios" placeholder="Demandas contra Municipios"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addTribunalArbitraje.demandasContraDependencias" placeholder="Demandas contra Dependencias"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addTribunalArbitraje.demandasContraOPDs" placeholder="Demandas contra OPDs"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addTribunalArbitraje.totalConveniosRealizados" placeholder="Total de Convenios realizados"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addTribunalArbitraje.laudos" placeholder="Laudos"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addTribunalArbitraje.conveniosCumplimientoLaudo" placeholder="Convenios en Cumplimiento a Laudo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addTribunalArbitraje.trabajadoresBeneficiados" placeholder="Trabajadores Beneficiados"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addTribunalArbitraje.cantidadRecuperadaEjecucion" placeholder="Cantidad Recuperada en Ejecución (MDP)"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="addTribunalArbitraje.opciones" disabled></ion-input>
+        </ion-item>
+
+        
+        <ion-button expand="block" color="success" (click)="AddTribunalArbitraje(addTribunalArbitraje.periodo, 
+        addTribunalArbitraje.demandasContraGobiernos, addTribunalArbitraje.demandasContraMunicipios, 
+        addTribunalArbitraje.demandasContraDependencias, addTribunalArbitraje.demandasContraOPDs, 
+        addTribunalArbitraje.totalConveniosRealizados, addTribunalArbitraje.laudos, 
+        addTribunalArbitraje.conveniosCumplimientoLaudo, addTribunalArbitraje.trabajadoresBeneficiados,
+        addTribunalArbitraje.cantidadRecuperadaEjecucion,
+        addTribunalArbitraje.opciones )">Agregar</ion-button>
+    </ion-card-content>
+  
+  </ion-card>
+  
+  
+    <div> <br> </div>
+  
+    <div style="margin-left: 20px; margin-right: 10px; margin-bottom: 20px; width: 95%; overflow: scroll;"> 
+  
+        <table height="250px" width="auto">
+  
+          <caption>Tribunal de Arbitraje en el Estado</caption>
+
+          <tr>
+            <th style="width: 250px;">CONCEPTO</th>
+            <th *ngFor="let infoTribunalArbitraje of TribunalArbitraje">
+              <ion-note style="color: white;">{{infoTribunalArbitraje.periodo}}</ion-note>
+            </th>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Demandas contra gobiernos Estatal y Municipales
+            </td>
+            <td *ngFor="let infoTribunalArbitraje of TribunalArbitraje">           
+              <ion-note>{{infoTribunalArbitraje.demandasContraGobiernos}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Demandas contra Municipios 
+            </td>
+            <td *ngFor="let infoTribunalArbitraje of TribunalArbitraje">           
+              <ion-note>{{infoTribunalArbitraje.demandasContraMunicipios}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Demandas contra Dependencias
+            </td>
+            <td *ngFor="let infoTribunalArbitraje of TribunalArbitraje">           
+              <ion-note>{{infoTribunalArbitraje.demandasContraDependencias}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Demandas contra OPDs
+            </td>
+            <td *ngFor="let infoTribunalArbitraje of TribunalArbitraje">           
+              <ion-note>{{infoTribunalArbitraje.demandasContraOPDs}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Total de Convenios realizados
+            </td>
+            <td *ngFor="let infoTribunalArbitraje of TribunalArbitraje">           
+              <ion-note>{{infoTribunalArbitraje.totalConveniosRealizados}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Laudos
+            </td>
+            <td *ngFor="let infoTribunalArbitraje of TribunalArbitraje">           
+              <ion-note>{{infoTribunalArbitraje.laudos}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Convenios en Cumplimiento a Laudo
+            </td>
+            <td *ngFor="let infoTribunalArbitraje of TribunalArbitraje">           
+              <ion-note>{{infoTribunalArbitraje.conveniosCumplimientoLaudo}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Trabajadores Beneficiados
+            </td>
+            <td *ngFor="let infoTribunalArbitraje of TribunalArbitraje">           
+              <ion-note>{{infoTribunalArbitraje.trabajadoresBeneficiados}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Cantidad Recuperada en Ejecución (MDP)
+            </td>
+            <td *ngFor="let infoTribunalArbitraje of TribunalArbitraje">           
+              <ion-note>${{infoTribunalArbitraje.cantidadRecuperadaEjecucion}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td>           
+            </td>
+            <td *ngFor="let infoTribunalArbitraje of TribunalArbitraje">         
+              <ion-note>{{infoTribunalArbitraje.opciones}}</ion-note>
+              <ion-row>
+                <ion-button size="small" color="primary" (click)="UpdateTribunalArbitraje(infoTribunalArbitraje.id, infoTribunalArbitraje.periodo, infoTribunalArbitraje.demandasContraGobiernos, infoTribunalArbitraje.demandasContraMunicipios, infoTribunalArbitraje.demandasContraDependencias, infoTribunalArbitraje.demandasContraOPDs, infoTribunalArbitraje.totalConveniosRealizados, infoTribunalArbitraje.laudos, infoTribunalArbitraje.conveniosCumplimientoLaudo, infoTribunalArbitraje.trabajadoresBeneficiados, infoTribunalArbitraje.cantidadRecuperadaEjecucion)"><ion-icon name="create-outline"></ion-icon></ion-button>
+              <ion-button size="small" color="danger" (click)="DeleteTribunalArbitraje(infoTribunalArbitraje.id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+              </ion-row>
+            </td>
+          </tr>
+
+
+        </table>
+      
+    </div> 
+
+</ion-content>

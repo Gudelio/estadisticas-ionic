@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="updateestadistica" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>PEA Ocupada</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+        Agregar registro
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-item>
+          <ion-input [(ngModel)]="addPEAOcupada.indicador" placeholder="indicador"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addPEAOcupada.cantidad" placeholder="cantidad"></ion-input>
+        </ion-item>
+      
+        <ion-button expand="block" color="success" (click)="AddPEAOcupada(addPEAOcupada.indicador, addPEAOcupada.cantidad)">Agregar</ion-button>
+    </ion-card-content>
+  
+  </ion-card>
+  
+  
+    <div> <br> </div>
+  
+    <div style="margin:0 20px; width: 100%; overflow: scroll;"> 
+  
+        <table height="auto" width="350px">
+  
+          <caption>PEA Ocupada</caption>
+  
+          <tr>
+            <th>Indicador</th>
+            <th>Cantidad</th>
+            <th>Opciones</th>
+          </tr>     
+         
+          <tr class="align-items-center" *ngFor="let infoPEAOcupada of PEAOcupada">
+            <td>             
+              <ion-note>{{infoPEAOcupada.indicador}}</ion-note>
+            </td>
+            <td>             
+              <ion-note>{{infoPEAOcupada.cantidad}}</ion-note>
+            </td>
+            <td>
+              <ion-button size="small" color="primary" (click)="UpdatePEAOcupada(infoPEAOcupada.id, infoPEAOcupada.indicador, infoPEAOcupada.cantidad)"><ion-icon name="create-outline"></ion-icon></ion-button>
+              <ion-button size="small" color="danger" (click)="DeletePEAOcupada(infoPEAOcupada.id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+            </td>
+          </tr>
+        </table>
+      
+    </div>
+
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="monto-laudos" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Monto de ejecuciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngFor="let semaforoEjecuciones of semaforosEjecuciones">
+
+    <ion-card style="position: relative">
+
+      <div align="center">
+        <pinch-zoom>
+              <ion-img class="img-post" [src]="semaforoEjecuciones.foto"></ion-img>
+            </pinch-zoom>
+      </div>
+
+      <br>
+  
+        <ion-row>
+        <ion-label> {{semaforoEjecuciones.nombre}}</ion-label>
+        </ion-row>
+
+        <ion-row>
+        <pre>{{semaforoEjecuciones.descripcion}}</pre>
+        </ion-row>
+  
+    </ion-card>
+  </div>
+
+  <br>
+
+  <div style="text-align:center;">
+    <ion-button size="small" (click)="SemaforoGlobal()">Regresar al principio</ion-button>
+    </div>
+
+</ion-content>

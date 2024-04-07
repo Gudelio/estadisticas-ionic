@@ -1,0 +1,69 @@
+<ion-content>
+  <br>
+  <h2>Tribunal de Arbitraje en el Estado</h2>
+    <br>
+  
+    <ion-row class="ion-text-center align-items-center">
+      <ion-col size="12">
+        <ion-text><h4>Actualizar registro</h4></ion-text>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input [(ngModel)]="periodo" placeholder="Periodo"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="demandasContraGobiernos" placeholder="Demandas contra gobiernos Estatal y Municipales"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="demandasContraMunicipios" placeholder="Demandas contra Municipios"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="demandasContraDependencias" placeholder="Demandas contra Dependencias"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="demandasContraOPDs" placeholder="Demandas contra OPDs"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="totalConveniosRealizados" placeholder="Total de Convenios realizados"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="laudos" placeholder="Laudos"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="conveniosCumplimientoLaudo" placeholder="Convenios en Cumplimiento a Laudo"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="trabajadoresBeneficiados" placeholder="Trabajadores Beneficiados"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-item>
+          <ion-input type="number"  [(ngModel)]="cantidadRecuperadaEjecucion" placeholder="Cantidad Recuperada en Ejecución (MDP)"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-button expand="block" color="success" (click)="UpdateTribunalArbitraje(periodo, demandasContraGobiernos, demandasContraMunicipios, demandasContraDependencias, demandasContraOPDs, totalConveniosRealizados, laudos, conveniosCumplimientoLaudo, trabajadoresBeneficiados, cantidadRecuperadaEjecucion)">Update</ion-button>
+      </ion-col>
+      <ion-col size="10" offset="1">
+        <ion-button expand="block" color="danger" (click)="CloseModal()">Cancel</ion-button>
+      </ion-col>
+    
+    </ion-row>  
+  
+  </ion-content>

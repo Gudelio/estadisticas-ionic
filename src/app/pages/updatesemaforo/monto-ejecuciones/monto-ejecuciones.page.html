@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="monto-laudos" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Monto de ejecuciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="text-align: end; margin: 10px;">
+    <ion-button  (click)="nuevo()"  class="normal" color="success">Nuevo</ion-button>
+  </div>
+  
+  <div *ngIf="enableNewSemaforoEjecuciones">
+  
+  
+        <ion-item>
+          <ion-buttons slot="end">
+            <ion-button (click)="enableNewSemaforoEjecuciones = false">
+              <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-button>
+             <ion-button (click)="guardarSemaforoEjecuciones() ">
+              <ion-icon color="primary" slot="icon-only" name="save-sharp"></ion-icon>
+              </ion-button>
+          </ion-buttons>
+        </ion-item>
+        <h3 class="subtitulo encabezado">Ingrese los datos</h3>
+        <ion-item>
+          <ion-label   class="normal" position="floating">
+              Nombre:
+          </ion-label>
+          <ion-input placeholder="Nombre" [(ngModel)]="newSemaforoEjecuciones.nombre" class="normal" type="text" inputmode="text">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label   class="normal" position="floating">
+              Descripción:
+          </ion-label>
+          <ion-textarea placeholder="Descripción" [(ngModel)]="newSemaforoEjecuciones.descripcion" class="normal"  type="text" inputmode="text">
+          </ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label class="normal">
+              Foto:
+          </ion-label>
+          <ion-buttons slot="end">
+            <ion-button>
+               <label for="file-upload">
+                 <ion-icon slot="icon-only" name="images"></ion-icon>
+               </label>
+                <input  (change)="newImageUpload($event)" id="file-upload" style="display: none" type="file"  accept="image/*">
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+        <ion-item>
+          <img class="image"  [src]="newSemaforoEjecuciones.foto">
+        </ion-item>
+  
+  </div>
+  
+  
+  
+    <h3 class="subtitulo encabezado">Lista de Monto de ejecuciones</h3>
+       
+    <ion-item *ngFor="let semaforoEjecuciones of semaforosEjecuciones">
+      <ion-label class="overflow-visible"> {{semaforoEjecuciones.nombre}}</ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="primary" (click)=" newSemaforoEjecuciones =  semaforoEjecuciones; enableNewSemaforoEjecuciones = true; ">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+        <ion-button color="danger" (click)="deleteSemaforoEjecuciones(semaforoEjecuciones)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <br>
+
+  <div style="text-align:center;">
+    <ion-button size="small" (click)="SemaforoGlobal()">Regresar al principio</ion-button>
+    </div>
+
+</ion-content>

@@ -1,0 +1,116 @@
+ion-content{
+--ion-background-color: #0732CE;
+--ion-background-color: -moz-linear-gradient(left, #0732CE 0%, #2873EE 50%, #b08fff 100%);
+--ion-background-color: -webkit-linear-gradient(left, #0732CE 0%, #2873EE 50%, #b08fff 100%);
+--ion-background-color: linear-gradient(to right, #0732CE 0%, #2873EE 50%, #b08fff 100%);
+}
+
+ion-header{
+    --ion-background-color: #292d58;
+}
+
+ion-back-button{
+    color: white;
+}
+
+ion-title{
+    text-align: center;
+    font-weight: bold;
+    color: aqua;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {background: #FEFEFE;}
+
+.menu_bar {
+    display: none;
+}
+
+header{
+    width: 100%;
+}
+
+header nav {
+    background: #023859;
+    z-index:1000;
+    max-width: 1000px;
+    width: 80%;
+    margin: 10px auto;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+
+}
+
+header nav ul li:hover {
+    background: #E6344A;
+}
+
+header nav ul li p:hover {
+    background: #E6344A;
+}
+
+header nav ul li p {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+ }
+
+header nav ul li p ion-icon{
+    margin-right: 10px;
+}
+
+header nav ul li:hover .children{
+    display: block;
+}
+
+header nav ul li .children{
+    display: none;
+    background: #011826;
+    position: relative;
+    width: 150%;
+    z-index: 1000;
+}
+
+header nav ul li .children li {
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li p {
+    display: block;
+    margin-left: 20px;
+}
+
+
+header nav ul li .children li p ion-icon {
+    float: right;
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+header nav ul li .caret {
+    float: right;
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+    margin-right: 0px;
+}

@@ -1,0 +1,41 @@
+ion-content{
+    --ion-background-color:#07b4f8;
+}
+
+ion-header{
+    --ion-background-color: #292d58;
+}
+
+ion-back-button{
+    color: white;
+}
+
+ion-title{
+    text-align: center;
+    font-weight: bold;
+    color: aqua;
+}
+
+ion-card{
+    background-color: #d6d4ec;
+}
+
+ion-label{
+    text-align: justify;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+}
+
+pre{
+    font-size: 14px;
+ }
+
+.img-post {
+    width: 390px;
+    margin: auto;
+}
+
+ion-img {
+    min-height: 1px !important;
+  }

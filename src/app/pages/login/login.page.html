@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title size="small">LOGIN</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaulthref="principal" text="">
+        </ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  
+ <ion-content>
+   <br>
+  <ion-card class="ion-no-margin">
+
+    <ion-card-header>
+        <ion-card-title>
+          Inicio de Sesión
+        </ion-card-title>
+        </ion-card-header>
+    <br/>
+        <ion-img src="assets/images/header1.png"></ion-img>
+
+          <ion-card-content>
+   <ion-item>
+      <ion-icon name="mail-outline"></ion-icon>
+      <ion-input type="email" placeholder="  Email" [(ngModel)]="credenciales.correo"></ion-input>
+   </ion-item>
+  
+
+   <ion-item>
+     <ion-icon name="lock-closed"></ion-icon>
+    <ion-input type="password" placeholder="  ********" [(ngModel)]="credenciales.password"></ion-input>
+   </ion-item>
+
+   <div class="sign-btn-wrap">
+    <ion-button shape="round" type="submit"  fill="solid" class="sign-btn" (click)="gotoLoginpage()">Login</ion-button>
+   </div>
+
+
+  </ion-card-content>
+  </ion-card>
+
+  <div class="ion-card-footer">
+    <span>¿No tienes cuenta?</span><button class="ion-no-padding" (click)="registerUser()">Sign Up</button>
+     </div>
+
+</ion-content>

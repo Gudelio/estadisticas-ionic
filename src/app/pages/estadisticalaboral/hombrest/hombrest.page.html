@@ -1,0 +1,29 @@
+<ion-content>
+
+  <div> <br> </div>
+  <div style=" width: 100%;"> 
+
+      <table height="auto" width="200px" style="margin: 0 auto;">
+
+        <caption>Hombres</caption>
+
+        <tr>
+          <th>Mes</th>
+          <th>Cantidad</th>
+        </tr>     
+       
+        <tr class="align-items-center" *ngFor="let infoHombres of Hombres">
+          <td>             
+            <ion-note>{{infoHombres.indicador}}</ion-note>
+          </td>
+          <td>             
+            <ion-note>{{infoHombres.cantidad}}</ion-note>
+          </td>
+        </tr>
+      </table>
+
+  </div>
+
+  <ion-item (click)="Salarios()"><ion-icon name="arrow-forward-sharp"></ion-icon></ion-item>
+ 
+</ion-content>

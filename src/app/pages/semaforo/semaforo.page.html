@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="home" text="">
+      </ion-back-button>
+      </ion-buttons>
+    <ion-title size="small">Semáforo Global</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngFor="let semaforo of semaforos">
+
+    <ion-card style="position: relative">
+      
+      <div align="center">
+        <pinch-zoom>
+              <ion-img class="img-post" [src]="semaforo.foto"></ion-img>
+        </pinch-zoom>  
+      </div>
+  
+      <br>
+      
+        <ion-row>
+        <ion-label> {{semaforo.nombre}}</ion-label>
+        </ion-row>
+
+        <ion-row>
+        <pre>{{semaforo.descripcion}}</pre>
+        </ion-row>
+
+        
+  
+    </ion-card>
+  </div>
+
+  <br>
+
+  <ion-item (click)="DemandasTramite()"><ion-icon name="arrow-forward-sharp"></ion-icon></ion-item> 
+
+
+</ion-content>

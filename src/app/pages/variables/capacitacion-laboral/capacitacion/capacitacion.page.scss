@@ -1,0 +1,30 @@
+ion-title{
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    color:rgb(10, 7, 7);
+  }
+  
+  caption{
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+  }
+    
+    th {
+      background-color: blue;
+      border: 1px solid rgb(51, 3, 141);
+    }
+    td {
+      border: 1px solid #dddddd;
+    }
+    td, th {
+      text-align: center;
+      padding: 12px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }

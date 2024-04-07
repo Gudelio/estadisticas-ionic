@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="updateestadistica" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Tasa de Desocupación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+        Agregar registro
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-item>
+          <ion-input [(ngModel)]="addTasadesocupacion.indicador" placeholder="indicador"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addTasadesocupacion.cantidad" placeholder="cantidad"></ion-input>
+        </ion-item>
+      
+        <ion-button expand="block" color="success" (click)="AddTasaDesocupacion(addTasadesocupacion.indicador, addTasadesocupacion.cantidad)">Agregar</ion-button>
+    </ion-card-content>
+  
+  </ion-card>
+  
+  
+    <div> <br> </div>
+  
+    <div style="margin:0 20px; width: 100%; overflow: scroll;"> 
+  
+        <table height="auto" width="400px">
+  
+          <caption>Tasa de Desocupación %</caption>
+  
+          <tr>
+            <th>Indicador</th>
+            <th>Cantidad</th>
+            <th>Opciones</th>
+          </tr>     
+         
+          <tr class="align-items-center" *ngFor="let infoTasadesocupacion of TasaDesocupacion">
+            <td>             
+              <ion-note>{{infoTasadesocupacion.indicador}}</ion-note>
+            </td>
+            <td>             
+              <ion-note>{{infoTasadesocupacion.cantidad}} %</ion-note>
+            </td>
+            <td>
+              <ion-button size="small" color="primary" (click)="UpdateTasaDesocupacion(infoTasadesocupacion.id, infoTasadesocupacion.indicador, infoTasadesocupacion.cantidad)"><ion-icon name="create-outline"></ion-icon></ion-button>
+              <ion-button size="small" color="danger" (click)="DeleteTasaDesocupacion(infoTasadesocupacion.id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+            </td>
+          </tr>
+        </table>
+      
+    </div>
+
+</ion-content>
+

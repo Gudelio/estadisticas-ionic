@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="updatevariables" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Junta Local de Conciliación y Arbitraje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+        Agregar registro
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-item>
+          <ion-input [(ngModel)]="addJuntaLocal.periodo" placeholder="Periodo"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addJuntaLocal.laudos" placeholder="Laudos"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addJuntaLocal.conveniosJuicio" placeholder="Convenios Dentro y Fuera de juicio"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addJuntaLocal.cantidadPagadaConvenios" placeholder="Cantidad pagada en convenios (MDP)"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="addJuntaLocal.opciones" disabled></ion-input>
+        </ion-item>
+
+        
+        <ion-button expand="block" color="success" (click)="AddJuntaLocal(addJuntaLocal.periodo, 
+        addJuntaLocal.laudos, addJuntaLocal.conveniosJuicio,
+        addJuntaLocal.cantidadPagadaConvenios, addJuntaLocal.opciones )">Agregar</ion-button>
+    </ion-card-content>
+  
+  </ion-card>
+  
+  
+    <div> <br> </div>
+  
+    <div style="margin-left: 20px; margin-right: 10px; margin-bottom: 20px; width: 95%; overflow: scroll;"> 
+  
+        <table height="250px" width="auto">
+  
+          <caption>Junta Local de Conciliación y Arbitraje</caption>
+
+          <tr>
+            <th style="width: 250px;">CONCEPTO</th>
+            <th *ngFor="let infoJuntaLocal of JuntaLocal">
+              <ion-note style="color: white;">{{infoJuntaLocal.periodo}}</ion-note>
+            </th>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Laudos
+            </td>
+            <td *ngFor="let infoJuntaLocal of JuntaLocal">           
+              <ion-note>{{infoJuntaLocal.laudos}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">            
+              Convenios Dentro y Fuera de juicio 
+            </td>
+            <td *ngFor="let infoJuntaLocal of JuntaLocal">         
+              <ion-note>{{infoJuntaLocal.conveniosJuicio}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">            
+              Cantidad pagada en convenios (MDP)
+            </td>
+            <td *ngFor="let infoJuntaLocal of JuntaLocal">         
+              <ion-note>${{infoJuntaLocal.cantidadPagadaConvenios}}</ion-note>
+            </td>
+          </tr>
+          
+          <tr class="align-items-center" >
+            <td>           
+            </td>
+            <td *ngFor="let infoJuntaLocal of JuntaLocal">         
+              <ion-note>{{infoJuntaLocal.opciones}}</ion-note>
+              <ion-row>
+                <ion-button size="small" color="primary" (click)="UpdateJuntaLocal(infoJuntaLocal.id, infoJuntaLocal.periodo, infoJuntaLocal.laudos, infoJuntaLocal.conveniosJuicio, infoJuntaLocal.cantidadPagadaConvenios)"><ion-icon name="create-outline"></ion-icon></ion-button>
+              <ion-button size="small" color="danger" (click)="DeleteJuntaLocal(infoJuntaLocal.id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+              </ion-row>
+            </td>
+          </tr>
+
+
+        </table>
+      
+    </div> 
+
+</ion-content>

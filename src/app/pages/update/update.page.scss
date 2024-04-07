@@ -1,0 +1,42 @@
+ion-content{
+    --ion-background-color:#07b4f8;
+}
+
+
+ion-header{
+     --ion-background-color:#f6f9fa;
+     background-color: #292d58;
+}
+
+ion-card-header{
+    text-align: center;
+    color: #fff;
+}
+
+
+ion-toolbar{
+    --ion-background-color:#3e6777; 
+    --opacity:0;
+}
+
+ion-title{
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color:rgb(247, 251, 252);
+    text-align: center;
+    
+}
+
+ion-card{
+    background-color: rgb(5, 9, 252);
+}
+
+
+ion-card-title{
+    font-size: 15px;
+    color: white; 
+    text-align: center;
+    font-weight: bold; 
+}

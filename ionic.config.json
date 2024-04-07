@@ -1,0 +1,7 @@
+{
+  "name": "Estadísticas STPSH",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

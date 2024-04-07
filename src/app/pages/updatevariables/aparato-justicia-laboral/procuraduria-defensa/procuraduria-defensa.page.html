@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="updatevariables" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Procuraduria de la Defensa del Trabajo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+        Agregar registro
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-item>
+          <ion-input [(ngModel)]="addProcuraduriaDefensa.periodo" placeholder="Periodo"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addProcuraduriaDefensa.asesoriasQuejasRecibidas" placeholder="Asesorias y Quejas recibidas"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addProcuraduriaDefensa.conciliaciones" placeholder="Conciliaciones"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addProcuraduriaDefensa.convenios" placeholder="Convenios"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addProcuraduriaDefensa.demandas" placeholder="Demandas"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addProcuraduriaDefensa.cantidadRecuperada" placeholder="Cantidad recuperada a favor de los trabajadores(MDP)"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input [(ngModel)]="addProcuraduriaDefensa.opciones" disabled></ion-input>
+        </ion-item>
+
+        
+        <ion-button expand="block" color="success" (click)="AddProcuraduriaDefensa(addProcuraduriaDefensa.periodo, 
+        addProcuraduriaDefensa.asesoriasQuejasRecibidas, addProcuraduriaDefensa.conciliaciones,
+        addProcuraduriaDefensa.convenios, addProcuraduriaDefensa.demandas, addProcuraduriaDefensa.cantidadRecuperada, 
+        addProcuraduriaDefensa.opciones )">Agregar</ion-button>
+    </ion-card-content>
+  
+  </ion-card>
+  
+  
+    <div> <br> </div>
+  
+    <div style="margin-left: 20px; margin-right: 10px; margin-bottom: 20px; width: 95%; overflow: scroll;"> 
+  
+        <table height="250px" width="auto">
+  
+          <caption>Procuraduria de la Defensa del Trabajo</caption>
+
+          <tr>
+            <th style="width: 220px;">CONCEPTO</th>
+            <th *ngFor="let infoProcuraduriaDefensa of ProcuraduriaDefensa">
+              <ion-note style="color: white;">{{infoProcuraduriaDefensa.periodo}}</ion-note>
+            </th>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">           
+              Asesorias y Quejas recibidas
+            </td>
+            <td *ngFor="let infoProcuraduriaDefensa of ProcuraduriaDefensa">           
+              <ion-note>{{infoProcuraduriaDefensa.asesoriasQuejasRecibidas}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">            
+              Conciliaciones
+            </td>
+            <td *ngFor="let infoProcuraduriaDefensa of ProcuraduriaDefensa">         
+              <ion-note>{{infoProcuraduriaDefensa.conciliaciones}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">            
+              Convenios
+            </td>
+            <td *ngFor="let infoProcuraduriaDefensa of ProcuraduriaDefensa">         
+              <ion-note>{{infoProcuraduriaDefensa.convenios}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">            
+              Demandas
+            </td>
+            <td *ngFor="let infoProcuraduriaDefensa of ProcuraduriaDefensa">         
+              <ion-note>{{infoProcuraduriaDefensa.demandas}}</ion-note>
+            </td>
+          </tr>
+
+          <tr class="align-items-center" >
+            <td style="text-align: justify;">            
+              Cantidad recuperada a favor de los trabajadores(MDP)
+            </td>
+            <td *ngFor="let infoProcuraduriaDefensa of ProcuraduriaDefensa">         
+              <ion-note>${{infoProcuraduriaDefensa.cantidadRecuperada}}</ion-note>
+            </td>
+          </tr>
+          
+          <tr class="align-items-center" >
+            <td>           
+            </td>
+            <td *ngFor="let infoProcuraduriaDefensa of ProcuraduriaDefensa">         
+              <ion-note>{{infoProcuraduriaDefensa.opciones}}</ion-note>
+              <ion-row>
+                <ion-button size="small" color="primary" (click)="UpdateProcuraduriaDefensa(infoProcuraduriaDefensa.id, infoProcuraduriaDefensa.periodo, infoProcuraduriaDefensa.asesoriasQuejasRecibidas, infoProcuraduriaDefensa.conciliaciones, infoProcuraduriaDefensa.convenios, infoProcuraduriaDefensa.demandas, infoProcuraduriaDefensa.cantidadRecuperada)"><ion-icon name="create-outline"></ion-icon></ion-button>
+              <ion-button size="small" color="danger" (click)="DeleteProcuraduria(infoProcuraduriaDefensa.id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+              </ion-row>
+            </td>
+          </tr>
+
+
+        </table>
+      
+    </div> 
+
+</ion-content>

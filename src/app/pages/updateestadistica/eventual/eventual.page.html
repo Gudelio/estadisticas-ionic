@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="updateestadistica" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Eventual</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+        Agregar registro
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-item>
+          <ion-input [(ngModel)]="addEventual.indicador" placeholder="año-mes"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="number" [(ngModel)]="addEventual.cantidad" placeholder="cantidad"></ion-input>
+        </ion-item>
+      
+        <ion-button expand="block" color="success" (click)="AddEventual(addEventual.indicador, addEventual.cantidad)">Agregar</ion-button>
+    </ion-card-content>
+  
+  </ion-card>
+  
+  
+    <div> <br> </div>
+  
+    <div style="margin:0 20px; width: 100%; overflow: scroll;"> 
+  
+        <table height="auto" width="400px">
+  
+          <caption>Eventual</caption>
+  
+          <tr>
+            <th>Mes</th>
+            <th>Cantidad</th>
+            <th>Opciones</th>
+          </tr>     
+         
+          <tr class="align-items-center" *ngFor="let infoEventual of Eventual">
+            <td>             
+              <ion-note>{{infoEventual.indicador}}</ion-note>
+            </td>
+            <td>             
+              <ion-note>{{infoEventual.cantidad}}</ion-note>
+            </td>
+            <td>
+              <ion-button size="small" color="primary" (click)="UpdateEventual(infoEventual.id, infoEventual.indicador, infoEventual.cantidad)"><ion-icon name="create-outline"></ion-icon></ion-button>
+              <ion-button size="small" color="danger" (click)="DeleteEventual(infoEventual.id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+            </td>
+          </tr>
+        </table>
+      
+    </div> 
+
+</ion-content>

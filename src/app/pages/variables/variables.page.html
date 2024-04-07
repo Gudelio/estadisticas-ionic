@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="home" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Variables</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <br>
+  <br>
+
+<header>
+<div class="menu_bar">
+ <a href="#" class="bt-menu">Variables</a>
+</div>
+
+<nav>
+ <ul>
+
+   <li class="submenu">
+      <p>CAPACITACIÓN LABORAL<ion-icon name="chevron-down-outline" class="caret"></ion-icon></p>
+      <ul class="children">
+          <li><p (click)="CapacitacionLaboral()">Capacitación Laboral</p></li>
+          <li><p (click)="ServiciosICATHI()">Otros Servicios de ICATHI</p></li>
+      </ul>
+   </li>
+
+   <li class="submenu">
+      <p>APARATO DE JUSTICIA LABORAL<ion-icon name="chevron-down-outline" class="caret"></ion-icon></p>
+      <ul class="children">
+          <li><p (click)="JuntaLocal()">Junta Local de Conciliación y Arbitraje</p></li>
+          <li><p (click)="ProcuraduriaDefensa()">Procuraduria de la Defensa del Trabajo</p></li>
+          <li><p (click)="TribunalArbitraje()">Tribunal de Arbitraje en el Estado</p></li>
+          <li><p (click)="CentroConciliacion()">Centro de Conciliación Laboral del Estado de Hidalgo</p></li>
+      </ul>
+  </li>
+
+   <li class="submenu">
+      <p>VINCULACIÓN LABORAL<ion-icon name="chevron-down-outline" class="caret"></ion-icon></p>
+      <ul class="children">
+          <li><p (click)="VinculacionLaboral()">Vinculación Laboral</p></li>
+      </ul>
+   </li>
+
+ </ul>
+</nav>
+</header>
+
+
+</ion-content>

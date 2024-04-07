@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="variables" text="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title size="small">Capacitación Laboral</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <br>
+  <br>
+
+  <div style="margin-left: 20px; margin-right: 10px; margin-bottom: 20px; width: 95%; overflow: scroll;"> 
+  
+    <table height="160px" width="auto">
+
+      <caption>Capacitación Laboral</caption>
+
+      <tr>
+        <th style="width: 190px;">CONCEPTO</th>
+        <th *ngFor="let infoCapacitacionLaboral of CapacitacionLaboral">
+          <ion-note style="color: white;">{{infoCapacitacionLaboral.periodo}}</ion-note>
+        </th>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">           
+          Cursos Impartidos
+        </td>
+        <td *ngFor="let infoCapacitacionLaboral of CapacitacionLaboral">           
+          <ion-note>{{infoCapacitacionLaboral.cursosimpartidos}}</ion-note>
+        </td>
+      </tr>
+
+      <tr class="align-items-center" >
+        <td style="text-align: justify;">            
+          Alumnos Capacitados
+        </td>
+        <td *ngFor="let infoCapacitacionLaboral of CapacitacionLaboral">         
+          <ion-note>{{infoCapacitacionLaboral.alumnoscapacitados}}</ion-note>
+        </td>
+      </tr>
+
+    </table>
+  
+</div> 
+
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-content>
+
+  <div> <br> </div>
+  <div style=" width: 100%;"> 
+
+      <table height="auto" width="200px" style="margin: 0 auto;">
+
+        <caption>PEA Desocupada</caption>
+
+        <tr>
+          <th>Indicador</th>
+          <th>Cantidad</th>
+        </tr>     
+       
+        <tr class="align-items-center" *ngFor="let infoPEADesocupada of PEADesocupada">
+          <td>             
+            <ion-note>{{infoPEADesocupada.indicador}}</ion-note>
+          </td>
+          <td>             
+            <ion-note>{{infoPEADesocupada.cantidad}}</ion-note>
+          </td>
+        </tr>
+      </table>
+    
+  </div>
+
+  <ion-item (click)="OcupacionInformal()"><ion-icon name="arrow-forward-sharp"></ion-icon></ion-item>
+
+</ion-content>

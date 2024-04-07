@@ -1,0 +1,17 @@
+<div>
+  <div class="chartWrapper" style="width: 100%; overflow-x: scroll; overflow-y: hidden">
+    <div class="chartAreaWrapper" *ngIf="barChartData" style="width: 9300px; height: 400px">
+      <canvas baseChart
+      height="400" width="0"
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [type]="barChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+  </div>
+</div>
+<ion-item (click)="Permanente()"><ion-icon name="arrow-forward-sharp"></ion-icon></ion-item> 
+
